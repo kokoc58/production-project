@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        // outDir не очень нам важен, так как мы используем webpack
+        "outDir": "./build/",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "moduleResolution": "node",
+        // esModuleInterop позволяет работать с пакетами, которые используют common js, как с обычными пакетами с помощью import
+        // (require() module.export) = common js
+        "esModuleInterop": true,
+        // allowSyntheticDefaultImports позволяет писать импорты без * для библиотек, которые не имеют default export 
+        // вместо import * as React from 'react'
+        // можно писать import React from 'react'
+        "allowSyntheticDefaultImports": true,
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    }
+}
